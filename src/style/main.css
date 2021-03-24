@@ -1,0 +1,445 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #0f1532;
+    /*background-color: #edeef0;*/
+    /*background-color: #7e8ea5;*/
+    /*background: linear-gradient(90deg, #58b6b9, #edf1cf);*/
+    background: url('../../src/assets/fon.png')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 13px;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,"Noto Sans Armenian",
+    "Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian",
+    "Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil",
+    "Noto Sans Telugu","Noto Sans Thai",sans-serif;
+
+    scrollbar-width: thin;
+    scrollbar-color: #b1d6d7 white;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    /*background-color: #345255;*/
+    background-color: white;
+    margin: 0;
+    top: 0;
+    padding: 5px 0;
+    height: 30px;
+    width: 100%;
+}
+
+.main {
+    display: grid;
+    margin-top: 50px;
+    width: 900px;
+    height: 520px;
+    grid-template-columns: 2fr 4fr;
+    /*grid-gap: 1px;*/
+    grid-template-areas:
+    "left-block right-block";
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 39px;
+    grid-area: menu;
+    background-color: white;
+    border-radius: 5px 0 0 0;
+    border-bottom: 1px solid #c9c9ca;
+}
+
+.name-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 1000;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right, #58b6b9, #edf1cf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: -1;
+}
+
+.search-box {
+    margin: 10px 15px;
+    width: 100%;
+}
+
+.pen {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #c9c9ca;
+    grid-area: pen;
+    background-color: white;
+    /*border-radius: 0 0 5px 0;*/
+}
+
+.dialogs-box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 480px;
+    grid-area: dialogs;
+    background-color: white;
+    /*border-radius: 0 0 0 5px;*/
+}
+
+.messages-box {
+    position: static;
+    height: 100%;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 35px;
+    /*margin: 1px;*/
+}
+
+.message:hover {
+    /*background: #f5f5f5;*/
+    /*background-color: #b3dbdd;*/
+
+    background: linear-gradient(90deg, #b1d6d7, #edf1cf);
+}
+
+.message-top-block {
+    display: flex;
+}
+
+.message-owner {
+    margin-right: 10px;
+    color: #345255;
+    font-weight: 700;
+}
+
+.message-date {
+    color: #4f4f4f;
+}
+
+.message-text {
+    margin-top: 5px;
+}
+
+.dialog {
+    display: grid;
+    border-top: solid 1px #c9c9ca;
+    padding: 10px;
+    grid-template-areas:
+    "username date"
+    "text text";
+    cursor: pointer;
+}
+
+.dialog:hover {
+    /*background-color: #f5f5f5;*/
+    background: linear-gradient(90deg, #b1d6d7, #edf1cf);
+}
+
+.dialog:active {
+    /*background-color: #345255;*/
+    /*  background-color: #b2c5de;*/
+    /*color: white;*/
+    background: linear-gradient(90deg, #96d4d6, #edf1cf);
+}
+
+.dialog:nth-child(1) {
+    border: 0;
+}
+
+.dialog-username {
+    grid-area: username;
+    font-weight: 700;
+}
+
+.dialog-text {
+    margin-top: 5px;
+    grid-area: text;
+}
+
+.dialog-date {
+    grid-area: date;
+    text-align: right;
+    color: #656565;
+}
+
+.dia-who {
+    color: #4f4f4f;
+}
+
+.dia-text {
+
+}
+
+.search {
+    border: 0;
+    width: 220px;
+}
+
+.search:focus  {
+    outline: none;
+}
+
+.menu-add-button {
+    background-color: white;
+    color: #7c7c7c;
+    height: 100%;
+    width: 39px;
+    margin: 0;
+    font-size: 25px;
+    cursor: pointer;
+    border-left: 1px solid #c9c9ca;
+}
+
+.menu-add-button:hover {
+    background: linear-gradient(90deg, #b1d6d7, #edf1cf);
+}
+
+.menu-add-button:active {
+    background: linear-gradient(90deg, #96d4d6, #edf1cf);
+}
+
+.left-block {
+    grid-area: left-block;
+    background: white;
+    /*border-radius: 5px 0 0 5px;*/
+    border-right: 1px solid #c9c9ca;
+    height: inherit;
+}
+
+.right-block {
+    display: flex;
+    flex-direction: column;
+    grid-area: right-block;
+    background: white;
+    /*border-radius: 0 5px 5px 0;*/
+    height: inherit;
+}
+
+.pen-input {
+    border: 0;
+}
+
+.pen-input:focus  {
+    outline: 0;
+}
+
+.pen-block-input {
+    border: 1px solid #c9c9ca;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    word-wrap: anywhere;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80px;
+    min-height: 16px;
+    word-break: break-word;
+}
+
+.pen-block-input:focus {
+    outline: 0;
+}
+
+button {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.send-button {
+    background: white;
+    color: #818181;
+    font-size: 25px;
+    width: 50px;
+    /*  border: 0;*/
+    height: 50px;
+    margin: 5px;
+}
+
+.send-button:hover {
+    color: #434343;
+}
+
+/*.send-button {*/
+/*  width: 56px;*/
+/*  height: 56px;*/
+/*  cursor: pointer;*/
+/*  background: none;*/
+/*}*/
+
+/*.send-button {*/
+/*  width: 57px;*/
+/*  height: 57px;*/
+/*  cursor: pointer;*/
+/*  background: none;*/
+/*  color: #888888;*/
+/*  border: 0;*/
+/*  font-size: 45px;*/
+/*}*/
+
+/*.send-button:active {*/
+/*  border: 1px solid #c9c9ca;*/
+/*}*/
+
+/*.send-button:focus {*/
+/*  outline: 0;*/
+/*}*/
+
+::-webkit-scrollbar-button {
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #56999f8f;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #56999f;
+}
+
+::-webkit-resizer{
+    width: 6px;
+    height: 0;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+.authorization {
+    margin-top: 150px;
+    padding: 5px;
+    width: 300px;
+    min-height: 220px;
+    background: white;
+    border-radius: 5px;
+}
+
+.auth-text {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.auth-input {
+    width: 85%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #d7d7d9;
+    border-radius: 5px;
+}
+
+.auth-input:focus {
+    outline: none;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+.auth-button {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-button:focus {
+    outline: none;
+}
+
+#button-enter {
+    background: #487175;
+    color: white;
+}
+
+#button-enter:hover {
+    background: #345255;
+}
+
+#button-registration {
+    background: none;
+    color: #345255;
+}
+
+#button-registration:hover {
+    text-decoration: underline;
+}
+
+.description-and-exit-button {
+    display: flex;
+}
+
+.exit-button {
+    padding: 8px;
+    margin-right: 10px;
+    /*border: 0;*/
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+    color: #487175;
+}
+
+.exit-button:hover {
+    background: linear-gradient(90deg, #b1d6d7, #edf1cf);
+}
+
+/*.exit-button:focus {*/
+/*  outline: none;*/
+/*}*/
+
+.description {
+    /*color: white;*/
+    margin-right: 10px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.center-block {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-active {
+    color: white;
+    background: #58b6b9;
+}
+
+.dialog-active:hover {
+    background: #58b6b9;
+}
+
+.dialog-active .dialog-date {
+    color: #d3ecee;
+}
